@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 RUN apt-get update && apt-get upgrade -y
-RUN install curl git wget htop tmux build-essential jq make lz4 gcc unzip -y
+RUN apt-get install curl git wget htop tmux build-essential jq make lz4 gcc unzip -y
 
 ENV HOME=/app
 
