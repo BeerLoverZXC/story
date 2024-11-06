@@ -44,7 +44,7 @@ s%:26657%:${STORY_PORT}657%g; \
 s%:26656%:${STORY_PORT}656%g; \
 s%^external_address = \"\"%external_address = \"$(wget -qO- eth0.me):${STORY_PORT}656\"%; \
 s%:26660%:${STORY_PORT}660%g" $HOME/.story/story/config/config.toml && \
-sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.story/story/config/config.toml \
+sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.story/story/config/config.toml && \
 sed -i -e "s/^indexer *=.*/indexer = \"null\"/" $HOME/.story/story/config/config.toml
 
 RUN wget -O $HOME/.story/story/config/genesis.json https://server-3.itrocket.net/testnet/story/genesis.json && \
