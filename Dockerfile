@@ -7,7 +7,7 @@ ENV HOME=/app
 
 WORKDIR /app
 
-ENV MONIKER="test"
+ENV MONIKER="Stake_Shark"
 ENV STORY_CHAIN_ID="odyssey"
 ENV STORY_PORT="52"
 ENV GO_VER="1.22.3"
