@@ -1,0 +1,19 @@
+services:
+  node-story:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: story-node
+    ports:
+      - "52546:52546"
+      - "52551:52551"
+      - "52545:52545"
+      - "52660:52660"
+      - "52656:52656"
+    restart: unless-stopped
+    volumes:
+      - story_volume:/app/.story
+      - ./entrypoint.sh:/app/entrypoint.sh
+
+volumes:
+  story_volume:
